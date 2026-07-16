@@ -233,12 +233,10 @@
       return email.toLowerCase().replace(/\./g, '_');
     }
 
-    // Lógica para calcular la comisión según la foto
+    // Lógica actualizada de comisiones
     function calcularComision(monto) {
-        if (monto < 400) return 2;
-        if (monto >= 500 && monto <= 1000) return 8;
-        if (monto > 1000) return 12;
-        return 0; // Si es entre 400 y 499, no se especificó comisión, se asume 0
+        if (monto < 1000) return 2; // Menos de 1000 son 2 pesos[span_2](start_span)[span_2](end_span)
+        return 8; // Arriba de 1000 son 8 pesos[span_3](start_span)[span_3](end_span)
     }
 
     inputEmail.addEventListener('change', function() {
